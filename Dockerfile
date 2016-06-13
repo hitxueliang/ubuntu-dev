@@ -84,4 +84,12 @@ WORKDIR /workspace
 
 
 # install scrapy
-RUN pip install scrapy scrapyd
+RUN apt-get install -y \
+    python3 \
+    python-dev \
+    python3-dev \
+    libssl-dev \
+    libffi-dev \
+    libxml2-dev \
+    libxslt-dev
+RUN pip install scrapy==1.1.0 scrapyd
